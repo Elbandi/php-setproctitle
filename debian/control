@@ -1,0 +1,17 @@
+Source: php-setproctitle
+Section: web
+Priority: optional
+Maintainer: Andras Elso <elso.andras@gmail.com>
+Build-Depends: debhelper (>= 7), po-debconf, xsltproc, php5-dev, libsetproctitle-dev
+Standards-Version: 3.8.1
+
+Package: php5-setproctitle
+Architecture: any
+Depends: ${shlibs:Depends}, ${php:Depends}, ${misc:Depends}
+Description: setproctitle module for PHP 5
+ Set proc title
+ .
+ This extension provides setproctitle function for setting the
+ invoking process's title.
+
+

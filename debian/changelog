@@ -1,0 +1,6 @@
+php-setproctitle (1.0-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Andras Elso <elso.andras@gmail.com>  Fri, 09 Dec 2011 20:13:19 +0100
+
