@@ -1,3 +1,10 @@
+php-setproctitle (1.0-2) bionic; urgency=low
+
+  * New debian build
+  * Fix format string literal
+
+ -- Andras Elso <elso.andras@gmail.com>  Fri, 13 Nov 2020 13:19:50 +0000
+
 php-setproctitle (1.0-1) unstable; urgency=low
 
   * Initial Release.
