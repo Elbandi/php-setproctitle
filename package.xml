@@ -1,40 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<package version="1.0">
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.9.4" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
   <name>setproctitle</name>
   <channel>pecl.php.net</channel>
-  <summary>Set proc title</summary>
+  <summary>Set process title</summary>
   <description>This extension provides setproctitle function for setting the invoking process's title.</description>
   <maintainer>
-   <name>Andras Elso</name>
-   <user>elso.andras</user>
-   <email>elso.andras@gmail.com</email>
-   <role>lead</role>
+    <name>Andras Elso</name>
+    <user>elso.andras</user>
+    <email>elso.andras@gmail.com</email>
+    <role>lead</role>
   </maintainer>
- <dependencies>
-  <required>
-   <php>
-    <min>5.3.2</min>
-   </php>
-   <pearinstaller>
-    <min>1.4.0</min>
-   </pearinstaller>
-  </required>
- </dependencies>
-<release>
-    <version>1.0</version>
-    <date>2011-12-09</date>
-    <license>PHP License</license>
-    <state>stable</state>
-    <notes>Initial release.</notes>
-    <configureoptions>
-      <configureoption name="with-setproctitle" default="autodetect" prompt="libsetproctitle installation directory?"/>
-    </configureoptions>
-  <filelist>
+  <date>2011-12-09</date>
+  <time>12:02:00</time>
+  <version>
+    <release>1.0</release>
+    <api>1.0</api>
+  </version>
+  <stability>
+    <release>stable</release>
+    <api>stable</api>
+  </stability>
+  <license uri="http://www.php.net/license">PHP License</license>
+  <notes>Initial release.</notes>
+  <contents>
     <dir name="/">
-      <file name="php_title.h" role="src" />
-      <file name="title.c" role="src" />
-      <file name="config.m4" role="src" />
+      <file md5sum="195be6b135e956a5eb71695888392ae0" name="config.m4" role="src"/>
+      <file md5sum="a9d8834d5e70e2c8c6e7155f670d5d4a" name="php_title.h" role="src">
+        <tasks:replace from="@PACKAGE_VERSION@" to="version" type="package-info"/>
+      </file>
+      <file md5sum="50f46f2118788785376683f8c8b7ee22" name="title.c" role="src"/>
     </dir>
-  </filelist>
-</release>
+  </contents>
+  <dependencies>
+    <required>
+      <php>
+        <min>5.3.2</min>
+        <max>8.0.0</max>
+      </php>
+      <pearinstaller>
+        <min>1.4.0</min>
+      </pearinstaller>
+    </required>
+  </dependencies>
+  <providesextension>setproctitle</providesextension>
+  <extsrcrelease>
+    <configureoption default="autodetect" name="with-setproctitle" prompt="libsetproctitle installation directory"/>
+  </extsrcrelease>
 </package>
