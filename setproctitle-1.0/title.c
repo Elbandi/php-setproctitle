@@ -36,7 +36,7 @@ PHP_FUNCTION(setproctitle) {
   if (zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, "s", &src, &src_len) == FAILURE || src_len < 1) {
     RETURN_FALSE;
   }
-  r = setproctitle(src);
+  r = setproctitle("%s", src);
   RETURN_LONG(r);
 /*
   va_list args;
